@@ -86,29 +86,28 @@ header {
   margin-bottom: 100px;
 }
 
-.box_cadastro{
+.box_cadastro {
   display: flex;
   justify-content: space-between;
   width: 90%;
   max-width: 1440px;
+  background-color: aquamarine;
 }
 
-
-
-
-.cadastro_coluna1{
-  background-color: #b0b0b0;
-width: 45%;
-}
-
-.cadastro_coluna2{
-  background-color: #FFD188;
+.cadastro_coluna1 {
+  background-color: lightgreen;
   width: 45%;
 }
 
-.categoria_img {
+.cadastro_coluna2 {
+  background-color: lightskyblue;
+  width: 45%;
+}
+
+.categoria_img{
   display: flex;
 }
-.Valor_peso{
+
+.valor_peso{
   display: flex;
 }
