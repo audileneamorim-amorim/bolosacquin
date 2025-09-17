@@ -5,12 +5,18 @@
   font-family: "Bellota", system-ui;
 }
 
+:root{
+  --corprincipal: #ffd188;
+  --arredondamento:10px;
+  --sombra:0 4px 4px 2px #00000025;
+}
+
 body {
   background-color: #FFF6E8;
 }
 
 header {
-  background-color: #FFD188;
+  background-color: var(--corprincipal);
   height: 100px;
 }
 
@@ -74,17 +80,24 @@ header {
   align-items: center;
 }
 
+.container_lista{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container_lista h2,
 .container_cadastro h2 {
   font-size: 48px;
   margin-top: 100px;
 }
-
+.container_lista hr,
 .container_cadastro hr {
   width: 300px;
   height: 4px;
   border: none;
   border-radius: 2px;
-  background-color: #FFD188;
+  background-color: var(--corprincipal);
   margin-bottom: 100px;
 }
 
@@ -202,17 +215,89 @@ input[type="file"]{
 .peso{
   width: 40%;
 }
+
+
+
+
+
+/* lista */
+table{
+  width: 90%;
+  max-width: 1200px;
+  text-align: center;
+  border-collapse: collapse;   
+}
+
+th{
+  border-bottom: solid 2px #FFD188;
+  padding-bottom: 5px;
+  font-size: 18px;
+}
+
+td{
+  padding-top: 10px 3px  5px  3px;
+  border-bottom: solid 2px #b3b3b350;
+}
+
+table svg {
+  width: 30px;
+}
+
+
 /* media */
+
+@media screen and (max-width: 1000px) {
+  table{
+    width: 98%;
+  }
+  
+}
 
 @media sceen and ( max-width: 768px){
   .box_cadastro{
     flex-direction: column;
   }
-}
-
-.container_cadastro input[type="button"]{
+  .container_cadastro input[type="button"]{
   padding: 10px 100px;
 }
+
+
+/*lista*/
+thead{
+  display: none;
+}
+
+tr{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  background-color:#ffffff;
+  border-radius: var(--arredondamento);
+  border: solid 1px var(--corprincipal);
+  box-shadow: 0 4px 2px #00000025;
+}
+
+td::before{
+  content:attr(data-cell);
+  font-weight: 600;
+
+}
+
+
+td:last-child{
+  align-self:flex-end;
+  border-bottom: solid;
+}
+
+
+
+
+
+
+}
+
+
+
 
 
 
